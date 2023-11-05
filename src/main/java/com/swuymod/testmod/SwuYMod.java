@@ -13,7 +13,8 @@ import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SwuYMod.MODID)
-public class SwuYMod {
+public class SwuYMod
+{
     // Define mod id in a common place for everything to reference
     public static final String MODID = "testmod";
 
@@ -21,7 +22,8 @@ public class SwuYMod {
     private static final Logger LOGGER = LogUtils.getLogger();
 
 
-    public SwuYMod() {
+    public SwuYMod()
+    {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
@@ -33,7 +35,8 @@ public class SwuYMod {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
+    private void commonSetup(final FMLCommonSetupEvent event)
+    {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
