@@ -37,6 +37,7 @@ public class SwuYMod {
 
 
         RegistryHandler.ITEMS.register(modEventBus);
+        RegistryHandler.BLOCKS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
